@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "worldgen-profiling",
+  "version": "${version}",
+
+  "name": "Worldgen Profiling",
+  "description": "Enables profiling during worldgen",
+  "authors": [
+    "Misode"
+  ],
+  "contact": {
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/FabricMC/fabric-example-mod"
+  },
+
+  "license": "MIT",
+  "icon": "assets/worldgen-profiling/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": []
+  },
+  "mixins": [
+    "worldgen-profiling.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.7.4",
+    "minecraft": ">=1.18"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}
