@@ -28,6 +28,6 @@ public class SurfaceBuildEvent extends Event {
     public SurfaceBuildEvent(ChunkPos chunkPos, RegistryKey<World> level) {
         this.chunkPosX = chunkPos.x;
         this.chunkPosZ = chunkPos.z;
-        this.level = level.toString();
+        this.level = level.getValue().toString();
     }
 }
