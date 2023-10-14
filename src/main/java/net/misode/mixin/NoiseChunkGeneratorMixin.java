@@ -4,6 +4,7 @@ import net.minecraft.world.ChunkRegion;
 import net.minecraft.world.chunk.Chunk;
 import net.minecraft.world.gen.StructureAccessor;
 import net.minecraft.world.gen.chunk.NoiseChunkGenerator;
+import net.minecraft.world.gen.noise.NoiseConfig;
 import net.misode.event.SurfaceBuildEvent;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Unique;
@@ -18,13 +19,13 @@ public abstract class NoiseChunkGeneratorMixin {
     private SurfaceBuildEvent surfaceBuildEvent;
 
 	@Inject(at = @At("HEAD"), method="buildSurface")
-	private void buildSurface(ChunkRegion region, StructureAccessor structures, Chunk chunk, CallbackInfo info) {
+	private void buildSurface(ChunkRegion region, StructureAccessor structures, NoiseConfig noiseConfig, Chunk chunk, CallbackInfo info) {
 		surfaceBuildEvent = new SurfaceBuildEvent(chunk.getPos(), region.toServerWorld().getRegistryKey());
 		surfaceBuildEvent.begin();
 	}
 
 	@Inject(at = @At("RETURN"), method="buildSurface")
-	private void buildSurfaceReturn(ChunkRegion region, StructureAccessor structures, Chunk chunk, CallbackInfo info) {
+	private void buildSurfaceReturn(ChunkRegion region, StructureAccessor structures, NoiseConfig noiseConfig, Chunk chunk, CallbackInfo info) {
 		surfaceBuildEvent.commit();
 	}
 }
