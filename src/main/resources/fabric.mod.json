@@ -9,8 +9,7 @@
     "Misode"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "sources": "https://github.com/misode/worldgen-profiling"
   },
 
   "license": "MIT",
@@ -25,7 +24,7 @@
   ],
 
   "depends": {
-    "fabricloader": ">=0.13.3",
-    "minecraft": "~1.19"
+    "fabricloader": ">=0.14",
+    "minecraft": "~1.20"
   }
 }
