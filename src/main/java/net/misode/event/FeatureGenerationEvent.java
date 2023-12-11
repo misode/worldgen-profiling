@@ -1,9 +1,9 @@
 package net.misode.event;
 
 import jdk.jfr.*;
+import net.minecraft.registry.RegistryKey;
 import net.minecraft.util.math.ChunkPos;
 import net.minecraft.util.profiling.jfr.JfrProfiler;
-import net.minecraft.util.registry.RegistryKey;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.GenerationStep;
 

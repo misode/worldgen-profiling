@@ -1,11 +1,11 @@
 package net.misode.mixin;
 
 import it.unimi.dsi.fastutil.ints.IntSet;
+import net.minecraft.registry.Registry;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.ChunkPos;
 import net.minecraft.util.math.ChunkSectionPos;
 import net.minecraft.util.math.random.ChunkRandom;
-import net.minecraft.util.registry.Registry;
 import net.minecraft.world.StructureWorldAccess;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.chunk.Chunk;
